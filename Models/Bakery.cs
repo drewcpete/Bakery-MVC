@@ -15,6 +15,11 @@ namespace Bakery.Models
             Description = description;
             Orders = new List<Order> ();
         }
+        public void AddOrder(Order order)
+        {
+            Orders.Add(order);
+        }
+        
     }
 
     public class Order
@@ -29,6 +34,7 @@ namespace Bakery.Models
             Price = 0;
             Date = date;
         }
+
     }
 }
 
