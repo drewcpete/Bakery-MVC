@@ -11,17 +11,18 @@ namespace Bakery.Controllers
         {
             return View();
         }
-        [HttpGet("/orders/new")]
-        public ActionResult Index()
-        {
-            return View();
-        }
+        
         [HttpPost("/orders")]
         public ActionResult Index()
         {
             return View();
         }
 
+        [HttpGet("/orders/new")]
+        public ActionResult Index()
+        {
+            return View();
+        }
     }
     
 }
