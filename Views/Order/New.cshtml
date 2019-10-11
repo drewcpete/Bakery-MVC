@@ -1,0 +1,19 @@
+@using Bakery.Models
+<h2>New Order Details</h2>
+<form action="/order">
+    <label for="vendorNameIn">Vendor Name</label>
+    <input type="text" name="vendorNameIn" id="vendorNameIn">
+    <br>
+    <label for="orderTitleIn">Title</label>
+    <input type="text" name="orderTitleIn" id="orderTitleIn">
+    <br>
+    <label for="orderPriceIn">Total Price</label>
+    <input type="number" name="orderPriceIn" id="orderPriceIn">
+    <br>
+    <label for="orderDescriptionIn">Describe Order</label>
+    <input type="text" name="orderDescriptionIn" id="orderDescriptionIn">
+    <br>
+    <label for="orderDateIn">Date</label>
+    <input type="text" name="orderDateIn" id="orderDateIn">
+    <button type="submit">Submit Order</button>
+</form>
