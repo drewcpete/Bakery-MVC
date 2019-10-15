@@ -9,18 +9,24 @@ namespace Bakery.Models
         public string Description {get; set;}
         public List<Order> Orders {get; set;}
         private static List<Vendor> _vendors = new List<Vendor> {};
+        public int Id {get; set;}
 
 
         public Vendor(string name, string description)
         {
             VendorName = name;
             Description = description;
-            Orders = new List<Order> ();
+            Orders = new List<Order> {};
             _vendors.Add(this);
+            Id = _vendors.Count;
         }
         public void AddOrder(Order order)
         {
             Orders.Add(order);
+        }
+        public static Vendor Find(int Id)
+        {
+            return _vendors[Id - 1];
         }
 
     }
@@ -31,6 +37,7 @@ namespace Bakery.Models
         public int Price { get; set; }
         public string Date { get; set; }
         public string OrderDescription {get; set;}
+        // public int Id {get; set;}
 
         public Order(string title, int price, string date, string orderDescription)
         {

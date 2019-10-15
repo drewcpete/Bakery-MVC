@@ -6,20 +6,21 @@ namespace Bakery.Controllers
 {
     public class BakeryController : Controller
     {
+        
         [HttpGet("/orders")]
         public ActionResult Index()
         {
             return View();
         }
         
-        [HttpPost("/orders")]
-        public ActionResult Index()
+        [HttpPost("/orders/show")]
+        public ActionResult Show()
         {
-            return View();
+          
         }
 
         [HttpGet("/orders/new")]
-        public ActionResult Index()
+        public ActionResult Build()
         {
             return View();
         }
