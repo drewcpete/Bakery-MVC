@@ -15,15 +15,15 @@ namespace Bakery.Controllers
         }
         
         [HttpPost("/orders/show")]
-        public ActionResult New()
+        public ActionResult Create()
         {
-          
+            Vendor vendor = new V
         }
 
         [HttpGet("/orders/new")]
-        public ActionResult Build()
+        public ActionResult New()
         {
-            
+
             return View();
         }
     }
