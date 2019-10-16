@@ -11,9 +11,7 @@ namespace Bakery.Controllers
         {
             List<Vendor> vendors = Vendor.GetAll();
             return View(vendors);
-        }
-
-        
+        }        
         
         [HttpGet("/vendor/new")]
         public ActionResult New()
@@ -21,6 +19,9 @@ namespace Bakery.Controllers
             return View();
         }
 
-        [Http]
+        [HttpGet("/vendor/show")]
+        {
+            
+        }
     }
 }

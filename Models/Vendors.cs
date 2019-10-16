@@ -28,6 +28,11 @@ namespace Bakery.Models
         {
             return _vendors[Id - 1];
         }
+        public static List<Vendor> GetAll()
+        {
+            return _vendors;
+        }
+
 
     }
 
