@@ -7,14 +7,15 @@ namespace Bakery.Controllers
     public class BakeryController : Controller
     {
         
-        [HttpGet("/orders")]
-        public ActionResult Index()
+        [HttpGet("/vendor/{vendorId}/show")]
+        public ActionResult Show(int vendorId)
         {
-            return View();
+            Vendor vendor = Vendor.Find(vendorId);
+            return View(vendor);
         }
         
         [HttpPost("/orders/show")]
-        public ActionResult Show()
+        public ActionResult New()
         {
           
         }
@@ -22,6 +23,7 @@ namespace Bakery.Controllers
         [HttpGet("/orders/new")]
         public ActionResult Build()
         {
+            
             return View();
         }
     }
