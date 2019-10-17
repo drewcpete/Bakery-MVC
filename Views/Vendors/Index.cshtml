@@ -1,13 +1,14 @@
 @using Bakery.Models;
 
+
 <h1>All Vendors:</h1>
 @if(Model.Count == 0 )
 {
     <p>You currently have no vendors!</p>
 }
-@foreach(Vendor vendor in Vendors)
+@foreach(Vendor vendor in Model)
 {
-    <p><a href="/vendors/@vendors.Id">@vendor.VendorName</a></p>
+    <p><a href="/vendors/@Model.Id">@vendor.VendorName</a></p>
 }
 
 <a href="/home">Go Home!</a>

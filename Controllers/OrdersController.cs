@@ -14,11 +14,13 @@ namespace Bakery.Controllers
             return View(vendor);
         }
         
-        [HttpPost("/orders/show")]
-        public ActionResult Create()
-        {
-            Vendor vendor = new V
-        }
+        // [HttpPost("/orders/{orderId}/")]
+        // public ActionResult Create()
+        // {
+        //     Vendor vendor = new Vendor;
+
+        //     return View()
+        // }
 
         [HttpGet("/orders/new")]
         public ActionResult New()

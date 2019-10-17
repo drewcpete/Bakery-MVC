@@ -11,7 +11,7 @@ namespace Bakery.Models
         public int Id {get; set;}
         private static List<Order> _orders = new List<Order> {};
 
-
+        
         public Order(string title, int price, string date, string orderDescription)
         {
             Title = title;
@@ -26,7 +26,6 @@ namespace Bakery.Models
         {
             return _orders;
         }
-
     }
 }
 
