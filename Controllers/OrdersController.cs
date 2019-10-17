@@ -5,29 +5,23 @@ using Bakery.Models;
 namespace Bakery.Controllers
 {
     public class BakeryController : Controller
-    {
+    {        
+        [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
+        public ActionResult Show(int vendorId, int orderId)
+        {
+            Order order = Order.Find(orderId);
+            Vendor vendor = Vendor.Find(vendorId);
+            Dictionary<string, object> model = new Dictionary<string, object>();
+            model.Add("order", order);
+            model.Add("vendor", vendor);
+            return View(model);
+        }
         
-        [HttpGet("/vendor/{vendorId}/show")]
-        public ActionResult Show(int vendorId)
+        [HttpGet("/vendors/{vendorId}/items/new")]
+        public ActionResult New(int vendorId)
         {
             Vendor vendor = Vendor.Find(vendorId);
             return View(vendor);
         }
-        
-        // [HttpPost("/orders/{orderId}/")]
-        // public ActionResult Create()
-        // {
-        //     Vendor vendor = new Vendor;
-
-        //     return View()
-        // }
-
-        [HttpGet("/orders/new")]
-        public ActionResult New()
-        {
-
-            return View();
-        }
-    }
-    
+    }    
 }

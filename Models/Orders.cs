@@ -26,6 +26,14 @@ namespace Bakery.Models
         {
             return _orders;
         }
+        public static Order Find(int searchId)
+        {
+            return _orders[searchId - 1];
+        }
+        public static void ClearAll()
+        {
+            _orders.Clear();
+        }
     }
 }
 
