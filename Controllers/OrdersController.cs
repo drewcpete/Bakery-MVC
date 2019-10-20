@@ -16,8 +16,6 @@ namespace Bakery.Controllers
             model.Add("vendor", vendor);
             return View(model);
         }
-
-        // [HttpPost("/orders")]
         
         [HttpGet("/vendors/{vendorId}/orders/new")]
         public ActionResult New(int vendorId)
@@ -25,11 +23,5 @@ namespace Bakery.Controllers
             Vendor vendor = Vendor.Find(vendorId);
             return View(vendor);
         }
-
-        // [HttpGet("/vendors/new")]
-        // public ActionResult New( )
-        // {
-        //     return View();
-        // }
     }    
 }
