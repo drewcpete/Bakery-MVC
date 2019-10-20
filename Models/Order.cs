@@ -8,7 +8,7 @@ namespace Bakery.Models
         public int Price { get; set; }
         public string Date { get; set; }
         public string OrderDescription { get; set; }
-        public int Id {get; set;}
+        public int OrderId {get; set;}
         private static List<Order> _orders = new List<Order> {};
 
         
@@ -19,7 +19,7 @@ namespace Bakery.Models
             Date = date;
             OrderDescription = orderDescription;
             _orders.Add(this);
-            Id = _orders.Count;
+            OrderId = _orders.Count;
         }
 
         public static List<Order> GetAll()

@@ -1,23 +1,23 @@
 
 <h2>New Order Details</h2>
-<form action="/vendors/@Model.Id/orders" method="post">
-    <label for="vendorNameIn">Vendor Name</label>
+<form action="/vendors/@Model.VendorId/orders" method="post">
+    <!-- <label for="vendorNameIn">Vendor Name</label>
     <input type="text" name="vendorNameIn" id="vendorNameIn">
+    <br> -->
+    <label for="Title">Title</label>
+    <input type="text" name="Title" id="Title">
     <br>
-    <label for="orderTitleIn">Title</label>
-    <input type="text" name="orderTitleIn" id="orderTitleIn">
+    <label for="Price">Total Price</label>
+    <input type="number" name="Price" id="Price">
     <br>
-    <label for="orderPriceIn">Total Price</label>
-    <input type="number" name="orderPriceIn" id="orderPriceIn">
+    <label for="orderDescription">Describe Order</label>
+    <input type="text" name="orderDescription" id="orderDescription">
     <br>
-    <label for="orderDescriptionIn">Describe Order</label>
-    <input type="text" name="orderDescriptionIn" id="orderDescriptionIn">
-    <br>
-    <label for="orderDateIn">Date</label>
-    <input type="text" name="orderDateIn" id="orderDateIn">
+    <label for="Date">Date</label>
+    <input type="text" name="Date" id="Date">
     <button type="submit">Submit Order</button>
 </form>
 <br>
-<a href="/home">Go Home!</a>
+<a href="/">Go Home!</a>
 <a href="/orders">Check out all orders!</a>
 <a href="/vendors">Check out all vendors!</a>
